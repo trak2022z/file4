@@ -18,6 +18,16 @@
      window.localStorage.setItem("favorite-drink", "coffee");
      window.localStorage.setItem("vegetarian", "true");
      id("results").textContent = "localStorage populated!";
+
+
+     
+    //Requirement: Values are Strings 
+    let notes = [{ tag : "Personal", note : "Feed Orange." }, { tag : "Personal", note : "Exercise Juice."}];
+    window.localStorage.setItem("notes", JSON.stringify(notes));
+    let data = JSON.parse(window.localStorage.getItem("notes"));
+    console.log(data);
+
+     
    }
 
    function setSessionStorage() {
